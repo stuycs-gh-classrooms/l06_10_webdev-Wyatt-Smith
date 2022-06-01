@@ -17,6 +17,7 @@ function setup() {
   frameRate(1);
 }
 function draw() {
+  circle(200,200,20);
   updateTime();
   clockFace();
   drawDate();
