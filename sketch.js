@@ -35,10 +35,10 @@ function updateTime() {
 
 function timeToAngle(hours, minutes, seconds) {
   // Add fractions for smooth minute and hour hand 
-  if (hours != -1) {
+  if (int(hours) != -1) {
     return (((hours%12)/12.) + (minutes/60./12.) + (seconds/60./12./60.)) * (2*PI);
   }
-  if (minutes != -1) {
+  if (int(minutes) != -1) {
     return ((minutes/60.) + (seconds/60./60.)) * (2*PI);
   }
   return (seconds/60.) * (2*PI);
