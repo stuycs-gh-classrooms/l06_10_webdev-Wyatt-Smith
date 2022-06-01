@@ -1,5 +1,4 @@
-println("hello");
-/*let month;
+let month;
 let day;
 let hour;
 let minute;
@@ -74,7 +73,7 @@ function clockFace() {
   let marks = 0;
   // Loops for time divisions
   while (marks < 60) {
-    stroke(#004DF0);
+    stroke(100,100,100);
     // Make 5 minute marks wider
     if (marks % 5 == 0) {
       strokeWeight(3);
@@ -97,4 +96,4 @@ function drawDate() {
   fill(100,200,150);
   text(month+"/"+day,centerX+25,centerY-15);
 }
-*/
+
