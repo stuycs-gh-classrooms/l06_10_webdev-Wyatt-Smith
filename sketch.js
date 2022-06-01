@@ -1,4 +1,5 @@
-let month;
+println("hello");
+/*let month;
 let day;
 let hour;
 let minute;
