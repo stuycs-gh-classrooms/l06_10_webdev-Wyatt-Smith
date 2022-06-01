@@ -8,7 +8,7 @@ let centerY;
 let radius;
 
 function setup() {
-  size(400,400);
+  createCanvas(400,400);
   background(255);
   centerX = width/2;
   centerY = height/2;
@@ -25,7 +25,7 @@ function draw() {
   drawHand(-1,-1,second,130,1);
 }
 
-void updateTime() {
+function updateTime() {
   month = month();
   day = day();
   hour = hour();
@@ -33,7 +33,7 @@ void updateTime() {
   second = second();
 }
 
-float timeToAngle(int hours, int minutes, int seconds) {
+function timeToAngle(hours, minutes, seconds) {
   // Add fractions for smooth minute and hour hand 
   if (hours != -1) {
     return (((hours%12)/12.) + (minutes/60./12.) + (seconds/60./12./60.)) * (2*PI);
@@ -44,9 +44,9 @@ float timeToAngle(int hours, int minutes, int seconds) {
   return (seconds/60.) * (2*PI);
   }
 
-void drawHand(int hours, int minutes, int seconds, int longness, int wideness) {
+function drawHand(hours, minutes, seconds, longness, wideness) {
   strokeWeight(wideness);
-  float angle;
+  let angle;
   if (hours != -1) {
     angle = timeToAngle(hours,minutes,seconds);
     stroke(0);
@@ -59,17 +59,17 @@ void drawHand(int hours, int minutes, int seconds, int longness, int wideness) {
     angle = timeToAngle(-1,-1,seconds);
     stroke(255,0,0);
   }
-  float endX = centerX + cos(angle-(PI/2)) * longness;
-  float endY = centerY + sin(angle-(PI/2)) * longness;
+  let endX = centerX + cos(angle-(PI/2)) * longness;
+  let endY = centerY + sin(angle-(PI/2)) * longness;
   line(centerX,centerY, endX, endY);
 }
 
-void clockFace() {
+function clockFace() {
   strokeWeight(1);
   stroke(0);
   fill(#F5E277);
   circle(centerX,centerY, radius*2);
-  int marks = 0;
+  let marks = 0;
   // Loops for time divisions
   while (marks < 60) {
     stroke(#004DF0);
@@ -80,17 +80,17 @@ void clockFace() {
     else {
       strokeWeight(1);
     }
-    float angle = timeToAngle(-1,-1,marks) - (PI/2);
-    float startX = centerX + cos(angle) * (radius-20);
-    float startY = centerY + sin(angle) * (radius-20);
-    float endX = centerX + cos(angle) * (radius-10);
-    float endY = centerY + sin(angle) * (radius-10);
+    let angle = timeToAngle(-1,-1,marks) - (PI/2);
+    let startX = centerX + cos(angle) * (radius-20);
+    let startY = centerY + sin(angle) * (radius-20);
+    let endX = centerX + cos(angle) * (radius-10);
+    let endY = centerY + sin(angle) * (radius-10);
     line(startX,startY,endX,endY);
     marks ++;
   }
 }
 
-void drawDate() {
+function drawDate() {
   textSize(12);
   fill(#004DF0);
   text(month+"/"+day,centerX+25,centerY-15);
