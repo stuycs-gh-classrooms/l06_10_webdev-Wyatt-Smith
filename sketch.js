@@ -97,3 +97,4 @@ function drawDate() {
   fill(100,200,150);
   text(month+"/"+day,centerX+25,centerY-15);
 }
+*/
