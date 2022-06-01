@@ -68,7 +68,7 @@ function drawHand(hours, minutes, seconds, longness, wideness) {
 function clockFace() {
   strokeWeight(1);
   stroke(0);
-  fill(#F5E277);
+  fill(200,200,0);
   circle(centerX,centerY, radius*2);
   let marks = 0;
   // Loops for time divisions
@@ -93,6 +93,6 @@ function clockFace() {
 
 function drawDate() {
   textSize(12);
-  fill(#004DF0);
+  fill(100,200,150);
   text(month+"/"+day,centerX+25,centerY-15);
 }
