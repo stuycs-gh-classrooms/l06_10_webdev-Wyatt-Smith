@@ -18,7 +18,7 @@ function setup() {
 }
 function draw() {
   circle(200,200,20);
-  updateTime();
+  second += 1;
   clockFace();
   drawDate();
   drawHand(hour,minute,second,70,4);
