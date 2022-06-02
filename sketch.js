@@ -18,7 +18,7 @@ function setup() {
 }
 function draw() {
   circle(200,200,20);
-  second += 1;
+  updateTime();
   clockFace();
   drawDate();
   drawHand(hour,minute,second,70,4);
@@ -27,11 +27,13 @@ function draw() {
 }
 
 function updateTime() {
-  month = 1;
-  day = 1;
-  hour = 1;
-  minute = 1;
-  second = 1;
+  second +=1;
+  if( (seconds % 60) == 0) {
+    mintutes ++;
+  }
+  if ((minutes % 60) == 0) {
+    hours ++;
+  }
 }
 
 function timeToAngle(hours, minutes, seconds) {
