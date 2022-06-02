@@ -28,11 +28,11 @@ function draw() {
 
 function updateTime() {
   second +=1;
-  if( (seconds % 60) == 0) {
-    mintutes ++;
+  if( (second % 60) == 0) {
+    mintute ++;
   }
-  if ((minutes % 60) == 0) {
-    hours ++;
+  if ((minute % 60) == 0) {
+    hour ++;
   }
 }
 
