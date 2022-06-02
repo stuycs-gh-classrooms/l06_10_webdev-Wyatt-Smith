@@ -27,11 +27,11 @@ function draw() {
 }
 
 function updateTime() {
-  month = month();
-  day = day();
-  hour = hour();
-  minute = minute();
-  second = second();
+  month = 1;
+  day = 1;
+  hour = 1;
+  minute = 1;
+  second = 1;
 }
 
 function timeToAngle(hours, minutes, seconds) {
