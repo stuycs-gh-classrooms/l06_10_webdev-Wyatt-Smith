@@ -36,9 +36,6 @@ function updateTime() {
   if( (second % 60) == 0) {
     mintute ++;
   }
-  if ((minute % 60) == 0) {
-    hour ++;
-  }
 }
 
 function timeToAngle(hours, minutes, seconds) {
