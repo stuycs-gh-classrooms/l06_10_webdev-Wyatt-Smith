@@ -13,6 +13,11 @@ function setup() {
   centerX = width/2;
   centerY = height/2;
   radius = 150;
+  month = 0;
+  day = 0;
+  hour = 0;
+  minute = 0;
+  second = 0;
   updateTime();
   frameRate(1);
 }
