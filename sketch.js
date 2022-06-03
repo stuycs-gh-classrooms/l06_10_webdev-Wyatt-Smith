@@ -34,7 +34,7 @@ function draw() {
 function updateTime() {
   second +=1;
   if( (second % 60) == 0) {
-    mintute ++;
+    minute ++;
   }
 }
 
